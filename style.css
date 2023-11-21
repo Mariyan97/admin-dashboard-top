@@ -18,14 +18,15 @@ body {
   height: 100%;
   background-color: var(--background-main);
   font-family: "DM Sans", sans-serif;
+}
+.wrapper {
   display: flex;
-  align-items: center;
 }
 /* sidebar navigation */
 .left-nav {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  width: 80px;
+  width: 5vw;
   height: 90vh;
   background-color: var(--grey);
   place-items: center;
@@ -36,7 +37,7 @@ body {
   transition: 200ms ease-in;
 }
 .left-nav:hover {
-  width: 218px;
+  width: 20vw;
   height: 100vh;
   border-radius: 0;
   margin: 0;
@@ -131,4 +132,60 @@ a {
   opacity: 1;
   position: relative;
   visibility: visible;
+}
+
+/* Top-Right Area */
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px 30px;
+}
+
+.user-date-selector {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.calendar-wrapper {
+}
+.page-name {
+  font-size: 25.63px;
+  font-weight: bold;
+  color: var(--neutral);
+}
+
+input[type="date"] {
+  background: var(--grey);
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+::-webkit-calendar-picker-indicator {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  filter: invert(1);
+}
+
+/* content-right side */
+.first-row {
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(22%, 258px));
+  gap: 4%;
+}
+
+.info-cards {
+  background-color: var(--grey);
+  height: 115px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
