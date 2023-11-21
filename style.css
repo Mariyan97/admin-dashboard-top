@@ -12,6 +12,7 @@
   --accent: #2fe5a7;
   --secondary: #ff69b4;
   --primary: #605cff;
+  --main-grey: #868d98;
   --main-transition: 150ms ease-in-out;
 }
 body {
@@ -34,7 +35,15 @@ body {
   margin-top: 40px;
   margin-left: 20px;
   border-radius: 10px;
+  transition: 150ms ease-in-out;
 }
+.left-nav:hover {
+  width: 218px;
+  height: 100vh;
+  border-radius: 0;
+  margin: 0;
+}
+
 .logo {
   padding-top: 20px;
   justify-self: center;
@@ -47,12 +56,12 @@ ul {
   display: grid;
   gap: 30px;
 }
-.icons {
+.link-items {
   filter: brightness(0) saturate(100%) invert(56%) sepia(17%) saturate(212%)
     hue-rotate(177deg) brightness(96%) contrast(84%);
   transition: var(--main-transition);
 }
-.icons:hover {
+.link-items:hover {
   filter: brightness(0) saturate(100%) invert(34%) sepia(99%) saturate(3174%)
     hue-rotate(231deg) brightness(102%) contrast(101%);
 }
@@ -62,7 +71,26 @@ ul {
   place-items: center;
   align-self: center;
 }
+.nav-items {
+  display: flex;
+}
+.link-items {
+  display: flex;
+  justify-content: center;
+  text-align: right;
+  gap: 20px;
+  align-items: center;
+  flex-direction: row;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-grey);
+}
 .account-photo {
   width: 43px;
   height: 43px;
+}
+.nav-text {
+  display: none;
 }
